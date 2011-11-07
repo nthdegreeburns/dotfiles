@@ -1,0 +1,50 @@
+######################################################################
+# GIT BASH PROMPT (http://aaroncrane.co.uk/2009/03/git_branch_prompt/)
+######################################################################
+function find_git_branch {
+    local dir=. head
+    until [ "$dir" -ef / ]; do
+        if [ -f "$dir/.git/HEAD" ]; then
+            head=$(< "$dir/.git/HEAD")
+            if [[ $head == ref:\ refs/heads/* ]]; then
+                git_branch=" ${head#*/*/}"
+            elif [[ $head != '' ]]; then
+                git_branch=' (detached)'
+            else
+                git_branch=' (unknown)'
+            fi
+            return
+        fi
+        dir="../$dir"
+    done
+    git_branch=''
+}
+
+PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
+
+light_red=$'\e[1;31m'
+red=$'\e[0;31m'
+white=$'\e[1;37m'
+dark_gray=$'\e[1;30m'
+magenta=$'\e[0;35m'
+light_blue=$'\e[1;34m'
+light_green=$'\e[1;32m'
+light_magenta=$'\e[1;35m'
+normal_colours=$'\e[m'
+
+export PS1="\[$dark_gray\][ \[$light_red\]\u\[$dark_gray\]@\[$red\]\h\[$dark_gray\] ]\[$white\] \w\[$light_blue\]\$git_branch \[$normal_colours\]$ "
+#export PS1="\[$light_green\]\u@\h:\w\[$light_magenta\]\$git_branch\[$light_green\]\\$\[$normal_colours\] "
+
+
+######################################################################
+# COLORS
+######################################################################
+alias ls='ls -G'
+export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
+#export CLICOLOR=1
+
+
+######################################################################
+# ARCHFLAGS FOR XCODE4
+######################################################################
+export ARCHFLAGS="-arch i386 -arch x86_64"
