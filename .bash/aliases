@@ -1,0 +1,21 @@
+######################################################################
+# FUNCTIONS
+######################################################################
+
+# Medley-related development exports and scripts
+function three() {
+    export DEVELDIR=~/virtualenvs
+    export MEDLEY=$DEVELDIR/cms_dev
+    export SOLR=$DEVELDIR/cms_solr
+    export JELLY=$GIT/jellydoughnut
+    source $JELLY/three_venv.sh
+    echo "three_venv.sh loaded..."
+}
+
+# Virtualenvwrapper-related development exports and scripts
+function wrapper() {
+    export WORKON_HOME=$HOME/virtualenvs
+    export PROJECT_HOME=$HOME/projects
+    source /usr/local/bin/virtualenvwrapper.sh
+    echo "virtualenvwrapper.sh loaded..."
+}
