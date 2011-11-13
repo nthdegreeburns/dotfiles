@@ -1,4 +1,9 @@
 ######################################################################
+# ARCHFLAGS FOR XCODE4
+######################################################################
+export ARCHFLAGS="-arch i386 -arch x86_64"
+
+######################################################################
 # GIT BASH PROMPT (http://aaroncrane.co.uk/2009/03/git_branch_prompt/)
 ######################################################################
 function find_git_branch {
@@ -42,9 +47,3 @@ export PS1="\[$dark_gray\][ \[$light_red\]\u\[$dark_gray\]@\[$red\]\h\[$dark_gra
 alias ls='ls -G'
 export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 #export CLICOLOR=1
-
-
-######################################################################
-# ARCHFLAGS FOR XCODE4
-######################################################################
-export ARCHFLAGS="-arch i386 -arch x86_64"
