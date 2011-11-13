@@ -4,5 +4,6 @@
 source ~/.bash/aliases
 source ~/.bash/paths
 source ~/.bash/config
-# gitignored and used to differentiate machines
+# .localrc used to differentiate machines / located in ~/
+# instead of dotfiles git repo
 source ~/.localrc
