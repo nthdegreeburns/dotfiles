@@ -1,3 +1,6 @@
+" pathogen sub-module
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 " pathogen
 call pathogen#infect()
 
