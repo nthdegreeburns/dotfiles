@@ -1,5 +1,5 @@
 " pathogen
-call pathogen#infect()
+" call pathogen#infect()
 
 " turn on syntax highlighting
 syntax on
