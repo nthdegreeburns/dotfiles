@@ -1,4 +1,16 @@
 ######################################################################
+# ALIASES
+######################################################################
+
+# Override OS X vim 7.2 with brew MacVim vim 7.3 terminal mode
+# until you have time to compile 7.3 properly
+alias vim='mvim -v'
+
+# Convenience aliases
+alias dotfiles='cd $GIT/dotfiles'
+alias repos='cd $GIT'
+
+######################################################################
 # FUNCTIONS
 ######################################################################
 
