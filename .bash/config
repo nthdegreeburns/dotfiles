@@ -6,6 +6,8 @@ export ARCHFLAGS="-arch i386 -arch x86_64"
 ######################################################################
 # GIT BASH PROMPT (http://aaroncrane.co.uk/2009/03/git_branch_prompt/)
 ######################################################################
+
+# Show a custom prompt when traversing a git branch in bash console
 function find_git_branch {
     local dir=. head
     until [ "$dir" -ef / ]; do
@@ -27,6 +29,7 @@ function find_git_branch {
 
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 
+# Custom colors for the git bash prompt
 light_red=$'\e[1;31m'
 red=$'\e[0;31m'
 white=$'\e[1;37m'
@@ -37,13 +40,13 @@ light_green=$'\e[1;32m'
 light_magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
+# Custom bash prompt with git branch bash prompt
 export PS1="\[$dark_gray\][ \[$light_red\]\u\[$dark_gray\]@\[$red\]\h\[$dark_gray\] ]\[$white\] \w\[$light_blue\]\$git_branch \[$normal_colours\]$ "
-#export PS1="\[$light_green\]\u@\h:\w\[$light_magenta\]\$git_branch\[$light_green\]\\$\[$normal_colours\] "
-
+# export PS1="\[$light_green\]\u@\h:\w\[$light_magenta\]\$git_branch\[$light_green\]\\$\[$normal_colours\] "
 
 ######################################################################
 # COLORS
 ######################################################################
 alias ls='ls -G'
 export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
-#export CLICOLOR=1
+# export CLICOLOR=1
