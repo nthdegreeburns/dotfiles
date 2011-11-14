@@ -4,6 +4,13 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " pathogen
 call pathogen#infect()
 
+" change mapleader from \ to ,
+let mapleader=","
+
+" edit/reload .vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 " turn on syntax highlighting
 syntax on
 
