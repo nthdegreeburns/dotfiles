@@ -28,3 +28,16 @@ set smarttab
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+
+" hide buffers instead of closing them
+set hidden
+
+" highlight search terms
+set hlsearch
+" show search matches as you type
+set incsearch
+
+" set command history to 1000
+set history=1000
+" set undo history to 1000
+set undolevels=1000
