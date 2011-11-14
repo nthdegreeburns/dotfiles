@@ -41,3 +41,6 @@ set incsearch
 set history=1000
 " set undo history to 1000
 set undolevels=1000
+
+" nerdtree
+map <F2> :NERDTreeToggle<CR>
