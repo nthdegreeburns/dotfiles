@@ -50,3 +50,14 @@ export PS1="\[$dark_gray\][ \[$light_red\]\u\[$dark_gray\]@\[$red\]\h\[$dark_gra
 alias ls='ls -G'
 export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 # export CLICOLOR=1
+
+######################################################################
+# HISTORY
+######################################################################
+
+# Remove duplicate commands from the bash history
+# HISTCONTROL=erasedups
+# Ignore successive duplicate commands AND commands with spaces (ignoredups and ignorespace)
+HISTCONTROL=ignoreboth
+# Set a larger history size than the bash default
+HISTSIZE=10000
