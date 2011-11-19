@@ -1,8 +1,23 @@
-" pathogen sub-module
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Plug-ins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
+" pathogen (loaded as a  sub-module)
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " pathogen
 call pathogen#infect()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" no like the vi compatibility
+set nocompatible
+
+" no backups / no swap files
+set nowritebackup
+set noswapfile
 
 " change mapleader from \ to ,
 let mapleader=","
