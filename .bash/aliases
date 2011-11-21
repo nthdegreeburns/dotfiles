@@ -29,3 +29,17 @@ function wrapper() {
     export PROJECT_HOME=$HOME/projects
     source /usr/local/bin/virtualenvwrapper.sh
 }
+
+# Git diff color initializiation
+function gitdiffcolor() {
+    git config --global color.diff.meta "yellow"
+    git config --global color.diff.frag "cyan"
+    git config --global color.diff.old "red"
+    git config --global color.diff.new "green"
+    git config --global color.diff.whitespace "red reverse"
+}
+
+# Git lg alias color / graph initialization
+function gitlgalias() {
+    git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg    reen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
+}
