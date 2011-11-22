@@ -32,6 +32,7 @@ function wrapper() {
 
 # Git diff color initializiation
 function gitdiffcolor() {
+    git config --global color.ui "auto"
     git config --global color.diff.meta "yellow"
     git config --global color.diff.frag "cyan"
     git config --global color.diff.old "red"
