@@ -42,5 +42,5 @@ function gitdiffcolor() {
 
 # Git lg alias color / graph initialization
 function gitlgalias() {
-    git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg    reen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
+    git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
 }
