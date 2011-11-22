@@ -12,25 +12,28 @@ call pathogen#infect()
 "=> General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" no like the vi compatibility
-set nocompatible
+set nocompatible        " no like the vi compatibility
 
-" no backups / no swap files
-set nowritebackup
-set noswapfile
+set nowritebackup       " no backup files
+set noswapfile          " no swap files
 
-" change mapleader from \ to ,
-let mapleader=","
+let mapleader=","       " set leader to ,
 
 " edit/reload .vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" turn on syntax highlighting
-syntax on
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Visual
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" turn on line numbers
-set number
+syntax on               " enable syntax highlighting
+
+filetype on             " enables filetype detection
+filetype plugin on      " enable filetype specific plug-ins
+filetype indent on      " respect filetype indentation
+
+set number              " turn on line numbering
 
 " turn on the ruler
 set ruler
