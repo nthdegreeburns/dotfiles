@@ -35,11 +35,9 @@ filetype indent on      " respect filetype indentation
 
 set number              " turn on line numbering
 
-" turn on the ruler
-set ruler
+set ruler               " turn on the ruler
 
-" set up a status bar
-set laststatus=2
+set laststatus=2        " set up a 2-line status bar
 
 " set tab settings
 set smarttab
