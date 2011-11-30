@@ -39,11 +39,16 @@ set ruler               " turn on the ruler
 
 set laststatus=2        " set up a 2-line status bar
 
-" set tab settings
-set smarttab
-set expandtab
-set softtabstop=4
-set shiftwidth=4
+set smarttab            " uses softtabstop and shiftwidth for tab spaces
+set expandtab           " uses the appropriate number of spaces when <Tab> is hit
+set softtabstop=4       " 4 spaces for softtabstop using <Tab>
+set shiftwidth=4        " 4 spaces for shiftwidth indentation
+
+" toggle the invisible characters on/off
+nmap <silent> <leader>l :set list!<CR>
+
+" change the formatting of invisible characters
+set listchars=tab:▸\ ,eol:¬,trail:-
 
 " hide buffers instead of closing them
 set hidden
