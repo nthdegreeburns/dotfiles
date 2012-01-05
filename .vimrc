@@ -48,7 +48,7 @@ set shiftwidth=4        " 4 spaces for shiftwidth indentation
 nmap <silent> <leader>l :set list!<CR>
 
 " change the formatting of invisible characters
-set listchars=tab:▸\ ,eol:¬,trail:-
+set listchars=tab:▸\ ,eol:¬,trail:.
 
 " hide buffers instead of closing them
 set hidden
