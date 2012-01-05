@@ -14,20 +14,20 @@ alias repos='cd $GIT'
 # FUNCTIONS
 ######################################################################
 
-# Medley-related development exports and scripts
-function three() {
-    export DEVELDIR=~/virtualenvs
-    export MEDLEY=$DEVELDIR/cms_dev
-    export SOLR=$DEVELDIR/cms_solr
-    export JELLY=$GIT/jellydoughnut
-    source $JELLY/three_venv.sh
+# Initialize work environment
+function workinit() {
+    export DEVELDIR=~/virtualenvs                   # three_venv.sh
+    export MEDLEY=$DEVELDIR/cms_dev                 # three_venv.sh
+    export SOLR=$DEVELDIR/cms_solr                  # three_venv.sh
+    export JELLY=$GIT/jellydoughnut                 # three_venv.sh
+#   source $JELLY/three_venv.sh                     # three_venv.sh
 }
 
-# Virtualenvwrapper-related development exports and scripts
-function wrapper() {
-    export WORKON_HOME=$HOME/virtualenvs
-    export PROJECT_HOME=$HOME/projects
-    source /usr/local/bin/virtualenvwrapper.sh
+# Initialize home environment
+function homeinit() {
+    export WORKON_HOME=$HOME/virtualenvs            # Virtualenvwrapper
+    export PROJECT_HOME=$HOME/projects              # Virtualenvwrapper
+    source /usr/local/bin/virtualenvwrapper.sh      # Virtualenvwrapper
 }
 
 # Git diff color initializiation
