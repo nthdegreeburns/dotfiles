@@ -44,3 +44,16 @@ function gitdiffcolor() {
 function gitlgalias() {
     git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative"
 }
+
+# Git config for vim as the core editor
+function giteditor() {
+    git config --global core.editor "vim"
+}
+
+# Symlink /usr/local/bin/vim to /usr/local/bin/mvim
+# to override OS X vim 7.2 with brew MacVim 7.3 terminal
+# mode (note: -v argument not needed for symlink for some reason;
+# requires that /usr/local/bin precede /usr/bin in PATH
+function linkmacvim() {
+    ln -s /usr/local/bin/mvim /usr/local/bin/vim
+}
