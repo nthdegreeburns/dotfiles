@@ -2,7 +2,11 @@
 "=> Plug-ins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
-" pathogen (loaded as a  sub-module)
+" disable pathogen plug-ins
+let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'nerdtree')           " nerdtree
+
+" pathogen (loaded as a sub-module)
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " pathogen
@@ -64,4 +68,4 @@ set history=1000
 set undolevels=1000
 
 " nerdtree
-map <F2> :NERDTreeToggle<CR>
+" map <F2> :NERDTreeToggle<CR>
