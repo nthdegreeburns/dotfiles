@@ -57,3 +57,18 @@ function giteditor() {
 function linkmacvim() {
     ln -s /usr/local/bin/mvim /usr/local/bin/vim
 }
+
+# Toggle AppleShowAllFiles
+function showallfiles() {
+    platform=$(uname -s)
+    if [ $platform = "Darwin" ]; then
+        current_value=$(defaults read com.apple.finder AppleShowAllFiles)
+        if [ $current_value = "TRUE" ]; then
+            defaults write com.apple.finder AppleShowAllFiles FALSE
+        else
+            defaults write com.apple.finder AppleShowAllFiles TRUE
+        fi
+    fi
+
+    killall Finder
+}
