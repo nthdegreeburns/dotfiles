@@ -2,7 +2,7 @@
 # PATH (SHARED)
 ######################################################################
 # fix for brew SVN; also puts MacVim symlink before system vim
-export PATH=/usr/local/bin/:$PATH
+export PATH=/usr/local/bin:$PATH
 
 ######################################################################
 # EXPORTS (SHARED)

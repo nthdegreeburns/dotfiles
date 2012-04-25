@@ -72,3 +72,12 @@ function showallfiles() {
 
     killall Finder
 }
+
+# Symlink the dotfiles
+function linkdotfiles() {
+    ln -s ~/git/dotfiles/.bash ~/.bash
+    ln -s ~/git/dotfiles/.vimrc ~/.vimrc
+    ln -s ~/git/dotfiles/.vim ~/.vim
+    ln -s ~/git/dotfiles/.bashrc ~/.bashrc
+    ln -s ~/git/dotfiles/.bash_profile ~/.bash_profile
+}
