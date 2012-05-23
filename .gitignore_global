@@ -1,0 +1,24 @@
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Sublime Text Editor
+/*.sublime-project
+*.sublime-workspace
+
+# OSX
+.DS_Store
+
+# OSX - Thumbnails
+._*
+
+# OSX - Files that might appear on external disk
+.Spotlight-V100
+.Trashes
