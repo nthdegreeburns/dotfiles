@@ -30,6 +30,11 @@ function homeinit() {
     source /usr/local/bin/virtualenvwrapper.sh      # Virtualenvwrapper
 }
 
+# Git global gitignore symlink
+function gitglobalignore() {
+    git config --global core.excludesfile ~/.global_ignore
+}
+
 # Git diff color initializiation
 function gitdiffcolor() {
     git config --global color.ui "auto"
@@ -59,7 +64,7 @@ function linkmacvim() {
 }
 
 # Toggle AppleShowAllFiles
-function showallfiles() {
+function togglehiddenfiles() {
     platform=$(uname -s)
     if [ $platform = "Darwin" ]; then
         current_value=$(defaults read com.apple.finder AppleShowAllFiles)
@@ -80,4 +85,5 @@ function linkdotfiles() {
     ln -s ~/git/dotfiles/.vim ~/.vim
     ln -s ~/git/dotfiles/.bashrc ~/.bashrc
     ln -s ~/git/dotfiles/.bash_profile ~/.bash_profile
+    ln -s ~/git/dotfiles/.global_gitignore ~/.global_gitignore
 }
