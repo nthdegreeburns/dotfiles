@@ -16,11 +16,9 @@ alias repos='cd $GIT'
 
 # Initialize work environment
 function workinit() {
-    export DEVELDIR=~/virtualenvs                   # three_venv.sh
-    export MEDLEY=$DEVELDIR/cms_dev                 # three_venv.sh
-    export SOLR=$DEVELDIR/cms_solr                  # three_venv.sh
-    export JELLY=$GIT/jellydoughnut                 # three_venv.sh
-#   source $JELLY/three_venv.sh                     # three_venv.sh
+    export WORKON_HOME=$HOME/virtualenvs            #Virtualenvwrapper
+    export PROJECT_HOME=$HOME/projects              #Virtualenvwrapper
+    source /usr/local/bin/virtualenvwrapper.sh      #Virtualenvwrapper
 }
 
 # Initialize home environment
