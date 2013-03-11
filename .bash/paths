@@ -3,6 +3,8 @@
 ######################################################################
 # fix for brew SVN; also puts MacVim symlink before system vim
 export PATH=/usr/local/bin:$PATH
+# fix for brew doctor
+export PATH=/usr/local/sbin:$PATH
 
 ######################################################################
 # EXPORTS (SHARED)
