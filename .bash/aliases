@@ -2,10 +2,6 @@
 # ALIASES
 ######################################################################
 
-# Override OS X vim 7.2 with brew MacVim vim 7.3 terminal mode
-# until you have time to compile 7.3 properly
-# alias vim='mvim -v'
-
 # Convenience aliases
 alias dotfiles='cd $GIT/dotfiles'
 alias repos='cd $GIT'
@@ -14,23 +10,9 @@ alias repos='cd $GIT'
 # FUNCTIONS
 ######################################################################
 
-# Initialize work environment
-function workinit() {
-    export WORKON_HOME=$HOME/virtualenvs            #Virtualenvwrapper
-    export PROJECT_HOME=$HOME/projects              #Virtualenvwrapper
-    source /usr/local/bin/virtualenvwrapper.sh      #Virtualenvwrapper
-}
-
-# Initialize home environment
-function homeinit() {
-    export WORKON_HOME=$HOME/virtualenvs            # Virtualenvwrapper
-    export PROJECT_HOME=$HOME/projects              # Virtualenvwrapper
-    source /usr/local/bin/virtualenvwrapper.sh      # Virtualenvwrapper
-}
-
 # Git global gitignore symlink
 function gitglobalignore() {
-    git config --global core.excludesfile ~/.global_ignore
+    git config --global core.excludesfile ~/.global_gitignore
 }
 
 # Git diff color initializiation
@@ -54,7 +36,7 @@ function giteditor() {
 }
 
 # Symlink /usr/local/bin/vim to /usr/local/bin/mvim
-# to override OS X vim 7.2 with brew MacVim 7.3 terminal
+# to override OS X vim 7.2 with brew MacVim 7.x terminal
 # mode (note: -v argument not needed for symlink for some reason;
 # requires that /usr/local/bin precede /usr/bin in PATH
 function linkmacvim() {

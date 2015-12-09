@@ -48,7 +48,7 @@ export PS1="\[$dark_gray\][ \[$light_red\]\u\[$dark_gray\]@\[$red\]\h\[$dark_gra
 # COLORS
 ######################################################################
 alias ls='ls -G'
-export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
+# export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 # export CLICOLOR=1
 
 ######################################################################
