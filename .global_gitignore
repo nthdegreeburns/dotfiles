@@ -8,6 +8,7 @@ local_settings.py
 .*.sw[a-z]
 *.un~
 Session.vim
+.netrwhist
 
 # Sublime Text Editor
 /*.sublime-project
