@@ -3,8 +3,8 @@
 ######################################################################
 
 # Convenience aliases
-alias dotfiles='cd $GIT/dotfiles'
-alias repos='cd $GIT'
+alias dotfiles='cd $GIT_HOME/dotfiles'
+alias repos='cd $GIT_HOME'
 
 ######################################################################
 # FUNCTIONS
