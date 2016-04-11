@@ -17,6 +17,8 @@ Plugin 'VundleVim/Vundle.vim'
 " actual plug-ins
 Plugin 'git@github.com:wincent/command-t.git'
 Plugin 'git@github.com:tpope/vim-fugitive.git'
+Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+Plugin 'git@github.com:vim-airline/vim-airline.git'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
